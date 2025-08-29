@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Ruchir Kulkarni</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Canvas for subtle background particles -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Main Content -->
+    <div class="main-container">
+        <header class="animate-on-scroll">
+            <div class="header-content">
+                <span>ABOUT</span>
+                <div class="header-line"></div>
+                <span>&copy; <span id="year"></span></span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <h1 class="hero-text animate-on-scroll">
+                    <span>I’m Ruchir — blending</span>
+                    <span><em>curiosity, code,</em> and <em>consulting</em></span>
+                    <span>to craft intelligent solutions.</span>
+                </h1>
+            </section>
+
+            <!-- About Me Section -->
+            <section class="personal-note-section">
+                 <div class="intro-tab animate-on-scroll">[BACKGROUND]</div>
+                <p class="animate-on-scroll" style="max-width: 700px;">
+                    <strong style="display: block; margin-bottom: 1rem; font-weight: 500;">2k25 • Folio of Ruchir</strong>
+                    Born in India, I grew up with sports on the field, games on the screen, and movies on repeat — until hacking pulled me into the thrill of breaking and learning. That curiosity led me to pursue Computer Science, where I discovered my passion for AI and problem-solving. Now, just a year into my professional journey as an AI developer and consultant, I channel that same drive into building intelligent solutions that create real impact.
+                    <br><br>
+                    Outside of work, I’m either tinkering with side projects, diving into filmmaking, or gaming late into the night while imagining what to build or break next.
+                </p>
+            </section>
+            
+            <!-- Animated Text Section -->
+            <section class="animated-text-section">
+                <h2 class="staggered-fade-in">
+                    <span>INTELLIGENT</span> <span>SOLUTIONS,</span> <span>UNIQUELY</span> <span>CRAFTED</span> <span>THROUGH</span> <span>DATA,</span> <span>EXPERIMENTATION</span> <span>AND</span> <span>INNOVATION.</span>
+                </h2>
+            </section>
+
+            <div class="cta-container animate-on-scroll">
+                 <a href="https://your-resume-link.com" target="_blank" class="cta-button">[ View my Resume ]</a>
+            </div>
+
+            <!-- Spotify Section -->
+            <section class="spotify-section">
+                <div class="spotify-header animate-on-scroll">
+                    <h2 class="featured-work-title">Currently On Repeat</h2>
+                </div>
+                <div class="spotify-content animate-on-scroll">
+                    <a href="https://open.spotify.com/track/YOUR_SONG_ID" target="_blank" class="spotify-widget">
+                        <img src="https://placehold.co/250x250/1a1d1a/8ab0ab?text=Album+Art" alt="Spotify Album Art">
+                    </a>
+                </div>
+            </section>
+
+            <!-- Inverted Contact Section -->
+            <section class="contact-section inverted">
+                <div class="animate-on-scroll" style="margin-bottom: 2rem;">
+                    <a href="index.html" class="home-button">HOME</a>
+                </div>
+                <h2 class="contact-title animate-on-scroll">Let’s Turn Your <em>Idea</em> Into a <em>Story.</em></h2>
+                <div class="contact-links animate-on-scroll">
+                    <a href="mailto:youremail@example.com">EMAIL</a>
+                    <a href="https://linkedin.com" target="_blank">LINKEDIN</a>
+                    <a href="https://x.com" target="_blank">X.COM</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="animate-on-scroll">
+            <div class="footer-content">
+                <span>Ruchir Kulkarni</span>
+                <div class="footer-line"></div>
+                <span>&copy; <span id="year-footer"></span></span>
+            </div>
+        </footer>
+
+        <!-- Floating Menu -->
+        <div class="floating-menu-button">
+            <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="menu-overlay">
+            <nav class="menu-nav">
+                <a href="index.html" style="--delay: 0.1s;">Home</a>
+                <a href="index.html#projects" style="--delay: 0.2s;">Projects</a>
+                <a href="about.html" style="--delay: 0.3s;">About</a>
+                <a href="https://your-resume-link.com" target="_blank" style="--delay: 0.4s;">Resume</a>
+            </nav>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
