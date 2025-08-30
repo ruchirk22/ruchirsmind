@@ -1,145 +1,728 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruchir Kulkarni - AI Development & Security</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Canvas for subtle background particles -->
-    <canvas id="particle-canvas"></canvas>
-
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ruchir Kulkarni - AI Solutions Architect & Consultant specializing in intelligent systems, cybersecurity, and machine learning solutions for businesses."
+    />
+    <title>Ruchir Kulkarni | AI Solutions Architect & Consultant</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="top">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Loading Screen -->
     <div class="loading-screen">
-        <div class="loading-content">
-            <div class="name">Ruchir Kulkarni</div>
-            <div class="line-container">
-                <div class="line"></div>
-            </div>
-            <div class="designation">AI Development & Security</div>
+      <div class="loading-content">
+        <div class="loading-text">
+          <span class="loading-name">Ruchir Kulkarni</span>
+          <div class="loading-bar">
+            <div class="loading-progress"></div>
+          </div>
+          <span class="loading-title">AI Solutions Architect</span>
         </div>
+      </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-container">
-        <header class="animate-on-scroll">
-            <div class="header-content">
-                <span>Ruchir Kulkarni</span>
-                <div class="header-line"></div>
-                <span>&copy; <span id="year"></span></span>
-            </div>
-        </header>
-
-        <main>
-            <!-- Hero Section -->
-            <section class="hero-section">
-                <h1 class="hero-text animate-on-scroll">
-                    Engineering the future, one <em>frame</em> at a time.
-                </h1>
-                <div class="status animate-on-scroll">
-                    <div class="blinking-dot"></div>
-                    <span>CURRENTLY AN AI DEVELOPER & CONSULTANT AT CALFUS INC.</span>
-                </div>
-            </section>
-
-            <!-- Intro Section -->
-            <section class="intro-section">
-                <div class="intro-tab animate-on-scroll">[QUICK INTRO]</div>
-                <p class="word-reveal-text">I help brands and businesses navigate the AI era by translating ideas into intelligent, future-ready systems.</p>
-            </section>
-
-            <!-- Personal Note Section -->
-            <section class="personal-note-section">
-                <p class="animate-on-scroll">I’m Ruchir, an AI developer, consultant, and storyteller of systems. I merge technology with stories, building intelligent solutions that empower businesses and reimagine possibilities.</p>
-                <div class="cta-container animate-on-scroll">
-                    <a href="about.html" class="cta-button">READ MY STORY</a>
-                </div>
-            </section>
-
-            <!-- Featured Projects Divider -->
-            <div class="divider animate-on-scroll">
-                <span>Featured Projects</span>
-                <div class="divider-line"></div>
-                <span>&copy; <span id="year-featured"></span></span>
-            </div>
-
-            <!-- Featured Work Section -->
-            <section class="featured-work-section" id="projects">
-                <h2 class="featured-work-title animate-on-scroll">Featured Work</h2>
-                <div class="project-cards">
-                    <div class="card animate-on-scroll">
-                        <a href="https://github.com" target="_blank">
-                            <div class="card-image">
-                                <img src="https://placehold.co/600x400/1a1d1a/8ab0ab?text=Project+One" alt="Project One">
-                            </div>
-                            <div class="card-content">
-                                <h3>Project One</h3>
-                                <p>A brief description of the project.</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="card animate-on-scroll">
-                        <a href="https://github.com" target="_blank">
-                            <div class="card-image">
-                                <img src="https://placehold.co/600x400/1a1d1a/8ab0ab?text=Project+Two" alt="Project Two">
-                            </div>
-                            <div class="card-content">
-                                <h3>Project Two</h3>
-                                <p>A brief description of the project.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <p class="work-summary animate-on-scroll">Problems I face, solved with data, research, and innovation. Crafted into solutions, delivered as stories.</p>
-                <div class="cta-container animate-on-scroll">
-                    <a href="https://github.com" target="_blank" class="cta-button">VIEW ALL MY WORK</a>
-                </div>
-            </section>
-
-            <!-- Inverted Contact Section -->
-            <section class="contact-section inverted">
-                <h2 class="contact-title animate-on-scroll">Let’s Turn Your <em>Idea</em> Into a <em>Story.</em></h2>
-                <div class="contact-links animate-on-scroll">
-                    <a href="mailto:youremail@example.com">EMAIL</a>
-                    <a href="https://linkedin.com" target="_blank">LINKEDIN</a>
-                    <a href="https://x.com" target="_blank">X.COM</a>
-                </div>
-            </section>
-        </main>
-
-        <footer class="animate-on-scroll">
-            <div class="footer-content">
-                <span>Ruchir Kulkarni</span>
-                <div class="footer-line"></div>
-                <span>&copy; <span id="year-footer"></span></span>
-            </div>
-        </footer>
-
-        <!-- Floating Menu -->
-        <div class="floating-menu-button">
-            <div class="hamburger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        <div class="menu-overlay">
-            <nav class="menu-nav">
-                <a href="index.html" style="--delay: 0.1s;">Home</a>
-                <a href="#projects" style="--delay: 0.2s;">Projects</a>
-                <a href="about.html" style="--delay: 0.3s;">About</a>
-                <a href="https://your-resume-link.com" target="_blank" style="--delay: 0.4s;">Resume</a>
-            </nav>
-        </div>
+    <!-- Progress Indicator -->
+    <div class="scroll-progress">
+      <div class="scroll-progress-bar"></div>
     </div>
+
+    <!-- Navigation -->
+    <header class="main-header">
+      <nav class="nav-container">
+        <a href="index.html" class="logo" aria-label="Ruchir Kulkarni - Home">
+          <span class="logo-text">Ruchir</span>
+          <span class="logo-accent">.</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="desktop-nav">
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="#contact" class="nav-cta">Let's Talk</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="mobile-menu-btn"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav">
+        <a href="#services" class="mobile-nav-link">Services</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+      </div>
+    </header>
+
+    <!-- Background Effects -->
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <div class="status-indicator"></div>
+            <span>Available for Consulting</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="typing-text">AI Solutions Architect</span>
+            <span class="hero-subtitle"
+              >Building intelligent systems that drive business growth</span
+            >
+          </h1>
+
+          <p class="hero-description">
+            I help businesses harness the power of artificial intelligence,
+            machine learning, and cybersecurity to create secure, scalable, and
+            intelligent solutions.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn-primary">View My Work</a>
+            <a href="#contact" class="btn-secondary">Start a Project</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Projects Delivered</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Security Success Rate</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">1yr+</span>
+              <span class="stat-label">Industry Experience</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="services-section">
+        <div class="section-header">
+          <span class="section-tag">What I Do</span>
+          <h2 class="section-title">Core Services</h2>
+          <p class="section-description">
+            Specialized AI and cybersecurity solutions that transform how
+            businesses operate
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  d="M9 12L11 14L15 10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <h3>AI & Machine Learning</h3>
+            <p>
+              Custom AI models, sentiment analysis, and predictive systems using
+              PyTorch and Python to solve complex business challenges.
+            </p>
+            <ul class="service-features">
+              <li>Custom Model Development</li>
+              <li>Sentiment Analysis Systems</li>
+              <li>Predictive Analytics</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  d="M12 6V12L16 14"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <h3>Cybersecurity Solutions</h3>
+            <p>
+              Advanced security systems including multi-factor authentication,
+              intrusion detection, and vulnerability assessments.
+            </p>
+            <ul class="service-features">
+              <li>Multi-Factor Authentication</li>
+              <li>Threat Detection Systems</li>
+              <li>Security Audits</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <h3>Technical Consulting</h3>
+            <p>
+              Strategic guidance on AI implementation, system architecture, and
+              technology roadmaps for businesses of all sizes.
+            </p>
+            <ul class="service-features">
+              <li>AI Strategy Development</li>
+              <li>System Architecture</li>
+              <li>Technology Roadmaps</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Projects -->
+      <section id="projects" class="projects-section">
+        <div class="section-header">
+          <span class="section-tag">Portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-description">
+            Real solutions delivering measurable business impact
+          </p>
+        </div>
+
+        <!-- Project Filters -->
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">
+            All Projects
+          </button>
+          <button class="filter-btn" data-filter="ai-ml">AI & ML</button>
+          <button class="filter-btn" data-filter="security">Security</button>
+          <button class="filter-btn" data-filter="consulting">
+            Consulting
+          </button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card" data-category="security">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop&crop=entropy&auto=format"
+                alt="Secure authentication dashboard interface showing user verification process"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="#"
+                    class="project-link"
+                    aria-label="View AuthGuardian live demo"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M18 13V6A6 6 0 0 0 6 6V13"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      />
+                      <rect
+                        x="2"
+                        y="11"
+                        width="20"
+                        height="11"
+                        rx="2"
+                        ry="2"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                    Live Demo
+                  </a>
+                  <a
+                    href="#"
+                    class="project-link"
+                    aria-label="View AuthGuardian source code"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 9 3.50679C6.27 1.67679 5.09 2.02679 5.09 2.02679C4.57638 3.22514 4.54414 4.5753 5 5.79679C4.03013 6.81549 3.49252 8.17026 3.5 9.57679C3.5 14.9968 6.8 16.1868 9.94 16.5768C9.611 16.9168 9.35726 17.3222 9.19531 17.7667C9.03335 18.2112 8.96681 18.6849 9 19.1568V22.0268"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                      <path
+                        d="M9 20.0267C6 20.9999 6 16.9999 4 16.0267"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                    Source
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">Cybersecurity</div>
+              <h3 class="project-title">AuthGuardian - Secure Login System</h3>
+              <p class="project-description">
+                Multi-factor authentication system built with Python and JWT,
+                reducing unauthorized access attempts by 98% through advanced
+                security protocols.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">JWT</span>
+                <span class="tech-tag">PostgreSQL</span>
+                <span class="tech-tag">Redis</span>
+              </div>
+              <div class="project-impact">
+                <div class="impact-metric">
+                  <span class="metric-value">98%</span>
+                  <span class="metric-label">Security Improvement</span>
+                </div>
+                <div class="impact-metric">
+                  <span class="metric-value">500ms</span>
+                  <span class="metric-label">Response Time</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card" data-category="ai-ml">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=entropy&auto=format"
+                alt="Data visualization dashboard showing sentiment analysis results and trends"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="#"
+                    class="project-link"
+                    aria-label="View Sentiment AI live demo"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M1 12S5 4 12 4S23 12 23 12S19 20 12 20S1 12 1 12Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="3"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                    Live Demo
+                  </a>
+                  <a
+                    href="#"
+                    class="project-link"
+                    aria-label="View Sentiment AI source code"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 9 3.50679C6.27 1.67679 5.09 2.02679 5.09 2.02679C4.57638 3.22514 4.54414 4.5753 5 5.79679C4.03013 6.81549 3.49252 8.17026 3.5 9.57679C3.5 14.9968 6.8 16.1868 9.94 16.5768C9.611 16.9168 9.35726 17.3222 9.19531 17.7667C9.03335 18.2112 8.96681 18.6849 9 19.1568V22.0268"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                      <path
+                        d="M9 20.0267C6 20.9999 6 16.9999 4 16.0267"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                    Source
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">Machine Learning</div>
+              <h3 class="project-title">Sentiment Analysis AI</h3>
+              <p class="project-description">
+                Advanced sentiment analysis model using PyTorch that improved
+                customer support ticket classification by 40%, processing
+                10,000+ tickets daily.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">BERT</span>
+                <span class="tech-tag">Docker</span>
+              </div>
+              <div class="project-impact">
+                <div class="impact-metric">
+                  <span class="metric-value">40%</span>
+                  <span class="metric-label">Accuracy Boost</span>
+                </div>
+                <div class="impact-metric">
+                  <span class="metric-value">10K+</span>
+                  <span class="metric-label">Daily Processing</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card" data-category="security">
+            <div class="project-image">
+              <img
+                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=entropy&auto=format"
+                alt="Network security monitoring dashboard with threat detection visualization"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="#"
+                    class="project-link"
+                    aria-label="View ThreatNet live demo"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                    Live Demo
+                  </a>
+                  <a
+                    href="#"
+                    class="project-link"
+                    aria-label="View ThreatNet source code"
+                  >
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M16 22.0268V19.1568C16.0375 18.68 15.9731 18.2006 15.811 17.7506C15.6489 17.3006 15.3929 16.8902 15.06 16.5468C18.2 16.1968 21.5 15.0068 21.5 9.54679C21.4997 8.15062 20.9627 6.80799 20 5.79679C20.4558 4.5753 20.4236 3.22514 19.91 2.02679C19.91 2.02679 18.73 1.67679 16 3.50679C13.708 2.88561 11.292 2.88561 9 3.50679C6.27 1.67679 5.09 2.02679 5.09 2.02679C4.57638 3.22514 4.54414 4.5753 5 5.79679C4.03013 6.81549 3.49252 8.17026 3.5 9.57679C3.5 14.9968 6.8 16.1868 9.94 16.5768C9.611 16.9168 9.35726 17.3222 9.19531 17.7667C9.03335 18.2112 8.96681 18.6849 9 19.1568V22.0268"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                      <path
+                        d="M9 20.0267C6 20.9999 6 16.9999 4 16.0267"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                      />
+                    </svg>
+                    Source
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <div class="project-category">AI Security</div>
+              <h3 class="project-title">ThreatNet Intrusion Detection</h3>
+              <p class="project-description">
+                Real-time network intrusion detection system using machine
+                learning to identify anomalous behavior with 99.5% accuracy and
+                sub-second response times.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Elasticsearch</span>
+                <span class="tech-tag">Kibana</span>
+              </div>
+              <div class="project-impact">
+                <div class="impact-metric">
+                  <span class="metric-value">99.5%</span>
+                  <span class="metric-label">Detection Rate</span>
+                </div>
+                <div class="impact-metric">
+                  <span class="metric-value">&lt;1s</span>
+                  <span class="metric-label">Response Time</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-cta">
+          <a
+            href="https://github.com/ruchirkulkarni"
+            class="btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View All Projects on GitHub
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M7 17L17 7M17 7H7M17 7V17"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section class="testimonials-section">
+        <div class="section-header">
+          <span class="section-tag">Client Success</span>
+          <h2 class="section-title">What Clients Say</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "Ruchir's AI solution reduced our customer support response time
+                by 60%. His technical expertise and business understanding made
+                the project a huge success."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Sarah Chen</h4>
+                <span>CTO, TechFlow Solutions</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "The security system Ruchir built for us prevented 15 potential
+                breaches in the first month. Outstanding work and attention to
+                detail."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-info">
+                <h4>Michael Rodriguez</h4>
+                <span>Security Director, DataGuard Corp</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+        <div class="contact-content">
+          <div class="contact-info">
+            <span class="section-tag">Ready to Build Something?</span>
+            <h2 class="contact-title">Let's Create Your Next AI Solution</h2>
+            <p class="contact-description">
+              Ready to transform your business with intelligent systems? Let's
+              discuss your project and explore how AI can drive your growth.
+            </p>
+
+            <div class="contact-methods">
+              <a href="mailto:ruchir@example.com" class="contact-method">
+                <div class="method-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                    <polyline
+                      points="22,6 12,13 2,6"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                <div class="method-info">
+                  <span class="method-label">Email</span>
+                  <span class="method-value">ruchir@example.com</span>
+                </div>
+              </a>
+
+              <a
+                href="https://linkedin.com/in/ruchir-kulkarni"
+                class="contact-method"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div class="method-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M16 8A6 6 0 0 1 22 14V21H18V14A2 2 0 0 0 14 14V21H10V9H14V11.5A6 6 0 0 1 16 8Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                    <rect
+                      x="2"
+                      y="9"
+                      width="4"
+                      height="12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                    <circle
+                      cx="4"
+                      cy="4"
+                      r="2"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      fill="none"
+                    />
+                  </svg>
+                </div>
+                <div class="method-info">
+                  <span class="method-label">LinkedIn</span>
+                  <span class="method-value">Connect with me</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form" aria-label="Contact form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="project">Project Type</label>
+              <select id="project" name="project" required>
+                <option value="">Select a service</option>
+                <option value="ai-ml">AI & Machine Learning</option>
+                <option value="security">Cybersecurity</option>
+                <option value="consulting">Technical Consulting</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Project Details</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell me about your project requirements..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary form-submit">
+              Send Message
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-text">Ruchir Kulkarni</span>
+          <p class="footer-tagline">AI Solutions Architect & Consultant</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Services</h4>
+            <a href="#services">AI & Machine Learning</a>
+            <a href="#services">Cybersecurity</a>
+            <a href="#services">Technical Consulting</a>
+          </div>
+
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <a href="mailto:ruchir@example.com">Email</a>
+            <a
+              href="https://linkedin.com/in/ruchir-kulkarni"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/ruchirkulkarni"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2025 Ruchir Kulkarni. All rights reserved.</span>
+        <a href="#top" class="back-to-top" aria-label="Back to top">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 19V5M5 12L12 5L19 12"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

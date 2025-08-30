@@ -1,116 +1,973 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Ruchir Kulkarni</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Ruchir Kulkarni - AI Solutions Architect with expertise in machine learning, cybersecurity, and technical consulting. Learn about my background, experience, and approach."
+    />
+    <title>About | Ruchir Kulkarni - AI Solutions Architect</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="top">
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Canvas for subtle background particles -->
-    <canvas id="particle-canvas"></canvas>
-
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-
-    <!-- Main Content -->
-    <div class="main-container">
-        <header class="animate-on-scroll">
-            <div class="header-content">
-                <span>ABOUT</span>
-                <div class="header-line"></div>
-                <span>&copy; <span id="year"></span></span>
-            </div>
-        </header>
-
-        <main>
-            <!-- Hero Section -->
-            <section class="hero-section">
-                <h1 class="hero-text animate-on-scroll">
-                    <span>I’m Ruchir — blending</span>
-                    <span><em>curiosity, code,</em> and <em>consulting</em></span>
-                    <span>to craft intelligent solutions.</span>
-                </h1>
-            </section>
-
-            <!-- About Me Section -->
-            <section class="personal-note-section">
-                 <div class="intro-tab animate-on-scroll">[BACKGROUND]</div>
-                <p class="animate-on-scroll" style="max-width: 700px;">
-                    <strong style="display: block; margin-bottom: 1rem; font-weight: 500;">2k25 • Folio of Ruchir</strong>
-                    Born in India, I grew up with sports on the field, games on the screen, and movies on repeat — until hacking pulled me into the thrill of breaking and learning. That curiosity led me to pursue Computer Science, where I discovered my passion for AI and problem-solving. Now, just a year into my professional journey as an AI developer and consultant, I channel that same drive into building intelligent solutions that create real impact.
-                    <br><br>
-                    Outside of work, I’m either tinkering with side projects, diving into filmmaking, or gaming late into the night while imagining what to build or break next.
-                </p>
-            </section>
-            
-            <!-- Animated Text Section -->
-            <section class="animated-text-section">
-                <h2 class="staggered-fade-in">
-                    <span>INTELLIGENT</span> <span>SOLUTIONS,</span> <span>UNIQUELY</span> <span>CRAFTED</span> <span>THROUGH</span> <span>DATA,</span> <span>EXPERIMENTATION</span> <span>AND</span> <span>INNOVATION.</span>
-                </h2>
-            </section>
-
-            <div class="cta-container animate-on-scroll">
-                 <a href="https://your-resume-link.com" target="_blank" class="cta-button">[ View my Resume ]</a>
-            </div>
-
-            <!-- Spotify Section -->
-            <section class="spotify-section">
-                <div class="spotify-header animate-on-scroll">
-                    <h2 class="featured-work-title">Currently On Repeat</h2>
-                </div>
-                <div class="spotify-content animate-on-scroll">
-                    <a href="https://open.spotify.com/track/YOUR_SONG_ID" target="_blank" class="spotify-widget">
-                        <img src="https://placehold.co/250x250/1a1d1a/8ab0ab?text=Album+Art" alt="Spotify Album Art">
-                    </a>
-                </div>
-            </section>
-
-            <!-- Inverted Contact Section -->
-            <section class="contact-section inverted">
-                <div class="animate-on-scroll" style="margin-bottom: 2rem;">
-                    <a href="index.html" class="home-button">HOME</a>
-                </div>
-                <h2 class="contact-title animate-on-scroll">Let’s Turn Your <em>Idea</em> Into a <em>Story.</em></h2>
-                <div class="contact-links animate-on-scroll">
-                    <a href="mailto:youremail@example.com">EMAIL</a>
-                    <a href="https://linkedin.com" target="_blank">LINKEDIN</a>
-                    <a href="https://x.com" target="_blank">X.COM</a>
-                </div>
-            </section>
-        </main>
-
-        <footer class="animate-on-scroll">
-            <div class="footer-content">
-                <span>Ruchir Kulkarni</span>
-                <div class="footer-line"></div>
-                <span>&copy; <span id="year-footer"></span></span>
-            </div>
-        </footer>
-
-        <!-- Floating Menu -->
-        <div class="floating-menu-button">
-            <div class="hamburger-icon">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-text">
+          <span class="loading-name">Ruchir Kulkarni</span>
+          <div class="loading-bar">
+            <div class="loading-progress"></div>
+          </div>
+          <span class="loading-title">AI Solutions Architect</span>
         </div>
-        <div class="menu-overlay">
-            <nav class="menu-nav">
-                <a href="index.html" style="--delay: 0.1s;">Home</a>
-                <a href="index.html#projects" style="--delay: 0.2s;">Projects</a>
-                <a href="about.html" style="--delay: 0.3s;">About</a>
-                <a href="https://your-resume-link.com" target="_blank" style="--delay: 0.4s;">Resume</a>
-            </nav>
-        </div>
+      </div>
     </div>
 
+    <!-- Progress Indicator -->
+    <div class="scroll-progress">
+      <div class="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="main-header">
+      <nav class="nav-container">
+        <a href="index.html" class="logo" aria-label="Ruchir Kulkarni - Home">
+          <span class="logo-text">Ruchir</span>
+          <span class="logo-accent">.</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="desktop-nav">
+          <a href="index.html#services" class="nav-link">Services</a>
+          <a href="index.html#projects" class="nav-link">Projects</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="index.html#contact" class="nav-cta">Let's Talk</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button
+          class="mobile-menu-btn"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <div class="mobile-nav">
+        <a href="index.html#services" class="mobile-nav-link">Services</a>
+        <a href="index.html#projects" class="mobile-nav-link">Projects</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="index.html#contact" class="mobile-nav-link">Contact</a>
+      </div>
+    </header>
+
+    <!-- Background Effects -->
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+    <main id="main-content">
+      <!-- About Hero Section -->
+      <section class="about-hero">
+        <div class="about-hero-content">
+          <div class="hero-badge">
+            <div class="status-indicator"></div>
+            <span>Available for Consulting</span>
+          </div>
+
+          <h1 class="about-title">
+            Building the future with
+            <span class="highlight">intelligent systems</span>
+          </h1>
+
+          <p class="about-description">
+            I'm an AI Solutions Architect who transforms complex business
+            challenges into secure, scalable intelligent systems. With a passion
+            for both cutting-edge technology and practical implementation, I help
+            organizations harness the power of AI while maintaining the highest
+            security standards.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number">1yr+</span>
+              <span class="stat-label">Experience</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">50+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">98%</span>
+              <span class="stat-label">Success Rate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <div class="image-placeholder">
+            <svg width="240" height="240" viewBox="0 0 240 240" fill="none">
+              <circle
+                cx="120"
+                cy="120"
+                r="100"
+                stroke="var(--primary)"
+                stroke-width="2"
+                fill="rgba(45, 212, 191, 0.1)"
+              />
+              <path
+                d="M80 100C80 100 100 120 120 100C140 120 160 100 160 100V140C160 155 145 170 120 170C95 170 80 155 80 140V100Z"
+                fill="var(--primary)"
+                opacity="0.3"
+              />
+              <circle cx="100" cy="90" r="8" fill="var(--primary)" />
+              <circle cx="140" cy="90" r="8" fill="var(--primary)" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Story Section -->
+      <section class="story-section">
+        <div class="story-content">
+          <div class="section-header">
+            <span class="section-tag">My Journey</span>
+            <h2 class="section-title">From Curiosity to Impact</h2>
+          </div>
+
+          <div class="story-grid">
+            <div class="story-card">
+              <div class="story-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <path
+                    d="M9 12L11 14L15 10"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <h3>The Foundation</h3>
+              <p>
+                Born in India with an insatiable curiosity for technology. My
+                journey began with games and ethical hacking, which naturally
+                evolved into a deep fascination with cybersecurity and AI systems.
+              </p>
+            </div>
+
+            <div class="story-card">
+              <div class="story-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="3"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <h3>The Transition</h3>
+              <p>
+                Transitioned from security research to production machine learning,
+                discovering the critical intersection between AI innovation and
+                security. This unique perspective shapes every solution I build.
+              </p>
+            </div>
+
+            <div class="story-card">
+              <div class="story-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M13 2L3 14H12L11 22L21 10H12L13 2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    fill="none"
+                  />
+                </svg>
+              </div>
+              <h3>The Impact</h3>
+              <p>
+                Today, I focus on helping teams turn ambitious ideas into secure,
+                measurable outcomes. Every project is an opportunity to push the
+                boundaries of what's possible while maintaining the highest standards.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills & Expertise -->
+      <section class="skills-section">
+        <div class="skills-content">
+          <div class="section-header">
+            <span class="section-tag">Expertise</span>
+            <h2 class="section-title">Technical Proficiency</h2>
+            <p class="section-description">
+              A comprehensive toolkit built through hands-on experience and
+              continuous learning
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>AI & Machine Learning</h3>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <span class="skill-name">Python</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 95%"></div>
+                  </div>
+                  <span class="skill-level">95%</span>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">PyTorch</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                  </div>
+                  <span class="skill-level">90%</span>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">TensorFlow</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                  </div>
+                  <span class="skill-level">85%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Backend & Infrastructure</h3>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <span class="skill-name">FastAPI</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                  </div>
+                  <span class="skill-level">90%</span>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">Docker</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                  </div>
+                  <span class="skill-level">85%</span>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">Kafka</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%"></div>
+                  </div>
+                  <span class="skill-level">80%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-category">
+              <h3>Security & Authentication</h3>
+              <div class="skill-items">
+                <div class="skill-item">
+                  <span class="skill-name">WebAuthn</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%"></div>
+                  </div>
+                  <span class="skill-level">85%</span>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">JWT Security</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%"></div>
+                  </div>
+                  <span class="skill-level">90%</span>
+                </div>
+                <div class="skill-item">
+                  <span class="skill-name">ONNX</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                  </div>
+                  <span class="skill-level">75%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Approach -->
+      <section class="approach-section">
+        <div class="approach-content">
+          <div class="section-header">
+            <span class="section-tag">Philosophy</span>
+            <h2 class="section-title">How I Work</h2>
+            <p class="section-description">
+              Evidence-driven development with security and maintainability at the core
+            </p>
+          </div>
+
+          <div class="approach-grid">
+            <div class="approach-card">
+              <div class="approach-number">01</div>
+              <h3>Evidence-Driven Decisions</h3>
+              <p>
+                Every recommendation is backed by data. I use A/B testing,
+                metrics analysis, and performance benchmarking to ensure solutions
+                deliver measurable business value.
+              </p>
+            </div>
+
+            <div class="approach-card">
+              <div class="approach-number">02</div>
+              <h3>Security-First Design</h3>
+              <p>
+                Security isn't an afterthought—it's built into every layer. From
+                authentication systems to data pipelines, I design with threat
+                modeling and defense in depth.
+              </p>
+            </div>
+
+            <div class="approach-card">
+              <div class="approach-number">03</div>
+              <h3>Clear Documentation</h3>
+              <p>
+                Comprehensive documentation, dashboards, and clean handoffs ensure
+                your team can maintain and extend the systems long after delivery.
+              </p>
+            </div>
+
+            <div class="approach-card">
+              <div class="approach-number">04</div>
+              <h3>Impact Over Complexity</h3>
+              <p>
+                The best solution is often the simplest one that works. I bias
+                toward maintainable, scalable solutions that solve real business
+                problems effectively.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Personal Touch -->
+      <section class="personal-section">
+        <div class="personal-content">
+          <div class="section-header">
+            <span class="section-tag">Beyond Code</span>
+            <h2 class="section-title">What Drives Me</h2>
+          </div>
+
+          <div class="personal-grid">
+            <div class="personal-card">
+              <h3>Current Inspiration</h3>
+              <div class="music-widget">
+                <div class="now-playing">
+                  <span class="playing-indicator">♪</span>
+                  <span class="track-info">Currently Listening</span>
+                </div>
+                <div class="album-art">
+                  <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                    <rect width="60" height="60" rx="8" fill="var(--bg-card)" />
+                    <circle cx="30" cy="30" r="20" stroke="var(--primary)" stroke-width="2" fill="none" />
+                    <circle cx="30" cy="30" r="4" fill="var(--primary)" />
+                  </svg>
+                </div>
+                <div class="track-details">
+                  <div class="track-title">Poems, Prayers & Promises</div>
+                  <div class="artist-name">John Denver</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="personal-card">
+              <h3>Core Values</h3>
+              <ul class="values-list">
+                <li>Continuous learning and adaptation</li>
+                <li>Ethical AI development practices</li>
+                <li>Transparent communication</li>
+                <li>Delivering on commitments</li>
+              </ul>
+            </div>
+
+            <div class="personal-card">
+              <h3>When I'm Not Coding</h3>
+              <p>
+                You'll find me exploring the latest AI research papers, contributing
+                to open-source projects, or enjoying the outdoors. I believe the best
+                solutions come from a well-rounded perspective.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="about-cta">
+        <div class="cta-content">
+          <h2 class="cta-title">Ready to Build Something Exceptional?</h2>
+          <p class="cta-description">
+            Let's discuss how we can turn your vision into a secure, intelligent
+            system that drives real business results.
+          </p>
+          <div class="cta-buttons">
+            <a href="index.html#contact" class="btn-primary">Start a Project</a>
+            <a href="index.html#projects" class="btn-secondary">View My Work</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-text">Ruchir Kulkarni</span>
+          <p class="footer-tagline">AI Solutions Architect & Consultant</p>
+        </div>
+
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>Services</h4>
+            <a href="index.html#services">AI & Machine Learning</a>
+            <a href="index.html#services">Cybersecurity</a>
+            <a href="index.html#services">Technical Consulting</a>
+          </div>
+
+          <div class="footer-section">
+            <h4>Connect</h4>
+            <a href="mailto:ruchir@example.com">Email</a>
+            <a
+              href="https://linkedin.com/in/ruchir-kulkarni"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+            <a
+              href="https://github.com/ruchirkulkarni"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2025 Ruchir Kulkarni. All rights reserved.</span>
+        <a href="#top" class="back-to-top" aria-label="Back to top">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 19V5M5 12L12 5L19 12"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+          </svg>
+        </a>
+      </div>
+    </footer>
+
     <script src="script.js"></script>
-</body>
+    
+    <!-- Additional CSS for About Page specific styles -->
+    <style>
+      /* About Page Specific Styles */
+      .about-hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: var(--space-3xl);
+        align-items: center;
+        min-height: 90vh;
+        padding: var(--space-4xl) var(--space-lg);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .about-hero-content {
+        text-align: center;
+      }
+
+      .about-title {
+        font-size: clamp(var(--text-3xl), 8vw, var(--text-5xl));
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: var(--space-lg);
+        line-height: 1.2;
+      }
+
+      .highlight {
+        color: var(--primary);
+        position: relative;
+      }
+
+      .about-description {
+        font-size: var(--text-lg);
+        color: var(--text-secondary);
+        max-width: 600px;
+        margin: 0 auto var(--space-2xl);
+        line-height: 1.6;
+      }
+
+      .about-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-lg);
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .about-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .image-placeholder {
+        width: 240px;
+        height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-card);
+        border-radius: 50%;
+        border: 2px solid var(--border-primary);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .story-section,
+      .skills-section,
+      .approach-section,
+      .personal-section {
+        padding: var(--space-4xl) var(--space-lg);
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .story-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--space-xl);
+      }
+
+      .story-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-primary);
+        border-radius: var(--radius-xl);
+        padding: var(--space-xl);
+        transition: all var(--transition-base);
+        text-align: center;
+      }
+
+      .story-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--primary);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .story-icon {
+        width: 64px;
+        height: 64px;
+        background: rgba(45, 212, 191, 0.1);
+        border-radius: var(--radius-lg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary);
+        margin: 0 auto var(--space-lg);
+      }
+
+      .story-card h3 {
+        font-size: var(--text-xl);
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: var(--space-sm);
+      }
+
+      .story-card p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: var(--space-2xl);
+      }
+
+      .skill-category {
+        background: var(--bg-card);
+        border: 1px solid var(--border-primary);
+        border-radius: var(--radius-xl);
+        padding: var(--space-xl);
+      }
+
+      .skill-category h3 {
+        font-size: var(--text-xl);
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: var(--space-lg);
+        text-align: center;
+      }
+
+      .skill-items {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+
+      .skill-item {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+      }
+
+      .skill-name {
+        font-weight: 500;
+        color: var(--text-primary);
+        min-width: 80px;
+      }
+
+      .skill-bar {
+        flex: 1;
+        height: 8px;
+        background: var(--bg-secondary);
+        border-radius: var(--radius-full);
+        overflow: hidden;
+      }
+
+      .skill-progress {
+        height: 100%;
+        background: linear-gradient(90deg, var(--primary), var(--primary-light));
+        transition: width 1s ease-out;
+      }
+
+      .skill-level {
+        font-size: var(--text-sm);
+        color: var(--text-muted);
+        font-family: var(--font-mono);
+        min-width: 40px;
+        text-align: right;
+      }
+
+      .approach-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: var(--space-xl);
+      }
+
+      .approach-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-primary);
+        border-radius: var(--radius-xl);
+        padding: var(--space-xl);
+        position: relative;
+        transition: all var(--transition-base);
+      }
+
+      .approach-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--primary);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .approach-number {
+        position: absolute;
+        top: -12px;
+        left: var(--space-lg);
+        background: var(--primary);
+        color: var(--text-inverse);
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--text-sm);
+        font-weight: 600;
+        font-family: var(--font-mono);
+      }
+
+      .approach-card h3 {
+        font-size: var(--text-xl);
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: var(--space-sm);
+        margin-top: var(--space-sm);
+      }
+
+      .approach-card p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      .personal-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--space-xl);
+      }
+
+      .personal-card {
+        background: var(--bg-card);
+        border: 1px solid var(--border-primary);
+        border-radius: var(--radius-xl);
+        padding: var(--space-xl);
+        transition: all var(--transition-base);
+      }
+
+      .personal-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--primary);
+      }
+
+      .personal-card h3 {
+        font-size: var(--text-lg);
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: var(--space-md);
+      }
+
+      .music-widget {
+        text-align: center;
+      }
+
+      .now-playing {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-xs);
+        margin-bottom: var(--space-md);
+      }
+
+      .playing-indicator {
+        color: var(--primary);
+        animation: pulse 2s infinite;
+      }
+
+      .track-info {
+        font-size: var(--text-sm);
+        color: var(--text-muted);
+      }
+
+      .album-art {
+        margin-bottom: var(--space-md);
+      }
+
+      .track-title {
+        font-weight: 600;
+        color: var(--text-primary);
+        margin-bottom: 4px;
+      }
+
+      .artist-name {
+        color: var(--text-muted);
+        font-size: var(--text-sm);
+      }
+
+      .values-list {
+        list-style: none;
+        padding: 0;
+      }
+
+      .values-list li {
+        color: var(--text-secondary);
+        margin-bottom: var(--space-xs);
+        position: relative;
+        padding-left: var(--space-md);
+      }
+
+      .values-list li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--primary);
+        font-weight: 600;
+      }
+
+      .personal-card p {
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      .about-cta {
+        background: var(--bg-secondary);
+        padding: var(--space-4xl) var(--space-lg);
+        text-align: center;
+      }
+
+      .cta-content {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .cta-title {
+        font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+        font-weight: 700;
+        color: var(--text-primary);
+        margin-bottom: var(--space-md);
+        line-height: 1.2;
+      }
+
+      .cta-description {
+        font-size: var(--text-lg);
+        color: var(--text-secondary);
+        margin-bottom: var(--space-2xl);
+        line-height: 1.6;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: var(--space-md);
+        justify-content: center;
+      }
+
+      /* Responsive Design */
+      @media (min-width: 768px) {
+        .about-hero {
+          grid-template-columns: 1fr 300px;
+          text-align: left;
+        }
+
+        .about-hero-content {
+          text-align: left;
+        }
+
+        .about-description,
+        .about-stats {
+          margin-left: 0;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .about-hero {
+          padding: var(--space-2xl) var(--space-sm);
+        }
+
+        .story-section,
+        .skills-section,
+        .approach-section,
+        .personal-section {
+          padding: var(--space-2xl) var(--space-sm);
+        }
+
+        .about-cta {
+          padding: var(--space-2xl) var(--space-sm);
+        }
+
+        .cta-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .about-stats {
+         grid-template-columns: repeat(3, 1fr);
+         gap: var(--space-sm);
+       }
+
+       .skills-grid {
+         grid-template-columns: 1fr;
+       }
+
+       .approach-grid {
+         grid-template-columns: 1fr;
+       }
+
+       .personal-grid {
+         grid-template-columns: 1fr;
+       }
+     }
+
+     /* Animation delays for staggered entrance */
+     .story-card:nth-child(1) { animation-delay: 0.2s; }
+     .story-card:nth-child(2) { animation-delay: 0.4s; }
+     .story-card:nth-child(3) { animation-delay: 0.6s; }
+
+     .approach-card:nth-child(1) { animation-delay: 0.1s; }
+     .approach-card:nth-child(2) { animation-delay: 0.2s; }
+     .approach-card:nth-child(3) { animation-delay: 0.3s; }
+     .approach-card:nth-child(4) { animation-delay: 0.4s; }
+
+     /* Skill bar animation trigger */
+     .skill-progress {
+       width: 0 !important;
+       transition: width 1.5s ease-out;
+     }
+
+     .skill-progress.animate {
+       width: var(--skill-width) !important;
+     }
+   </style>
+
+   <script>
+     // About page specific JavaScript
+     document.addEventListener('DOMContentLoaded', function() {
+       // Animate skill bars when they come into view
+       const skillBars = document.querySelectorAll('.skill-progress');
+       
+       const skillObserver = new IntersectionObserver((entries) => {
+         entries.forEach(entry => {
+           if (entry.isIntersecting) {
+             const bar = entry.target;
+             const width = bar.parentElement.nextElementSibling.textContent;
+             bar.style.setProperty('--skill-width', width);
+             bar.classList.add('animate');
+             
+             // Animate the percentage counter
+             const counter = bar.parentElement.nextElementSibling;
+             const target = parseInt(width);
+             let current = 0;
+             const increment = target / 30; // 30 frames for smooth animation
+             
+             const countUp = () => {
+               if (current < target) {
+                 current += increment;
+                 counter.textContent = Math.round(current) + '%';
+                 requestAnimationFrame(countUp);
+               } else {
+                 counter.textContent = target + '%';
+               }
+             };
+             
+             setTimeout(countUp, 500); // Start after bar animation begins
+             skillObserver.unobserve(entry.target);
+           }
+         });
+       }, {
+         threshold: 0.5
+       });
+
+       skillBars.forEach(bar => {
+         bar.style.width = bar.style.width; // Store original width
+         skillObserver.observe(bar);
+       });
+     });
+   </script>
+ </body>
 </html>
