@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <style>
-        /* --- PROFESSIONAL REDESIGN V5 (Shared Styles) --- */
+        /* --- PROFESSIONAL REDESIGN V7 (Shared Styles) --- */
         :root {
             --bg-color: #1a1d1a;
             --primary-text: #8ab0ab;
@@ -64,38 +64,108 @@
         .footer-content .animated-line { flex-grow: 1; margin: 0 1.5rem; }
 
         /* --- HERO & CONTENT SECTIONS --- */
-        .hero-section { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; }
-        .hero-text { font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.25; font-weight: 500; color: var(--heading-color); }
+        .hero-section { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; padding-bottom: 10vh; /* Pushes content up */ }
+        .hero-text { font-size: clamp(3rem, 8vw, 7rem); line-height: 1.2; font-weight: 500; color: var(--heading-color); }
         .hero-text span { display: block; }
-        .personal-note-section, .leadership-section { padding: 4rem 0 0 0; }
-        .intro-tab { font-size: 0.8rem; margin-bottom: 2rem; text-transform: uppercase; color: var(--heading-color); }
-        .personal-note-section p, .leadership-section p { font-size: clamp(1.1rem, 2vw, 1.3rem); line-height: 1.8; max-width: 800px; font-weight: 400; }
-        .personal-note-section p strong { display: block; margin-bottom: 1rem; font-weight: 500; color: var(--heading-color); }
+        .status { display: flex; align-items: center; margin-top: 2.5rem; font-size: 0.9rem; letter-spacing: 1.5px; text-transform: uppercase; }
+        .blinking-dot { width: 10px; height: 10px; background-color: var(--accent-color); border-radius: 50%; margin-right: 15px; animation: pulse 2s infinite; }
         
-        .animated-text-section { padding: 8rem 0; text-align: center; }
-        .staggered-fade-in { font-size: clamp(2rem, 5vw, 4.5rem); font-weight: 500; color: var(--heading-color); }
-        .staggered-fade-in span { display: inline-block; opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
-        .animated-text-section.is-visible .staggered-fade-in span { opacity: 1; transform: translateY(0); }
+        .about-content-section {
+            padding: 8rem 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
 
-        .cta-container { text-align: center; margin: 4rem 0 8rem 0; }
+        .about-text-column p { font-size: clamp(1.1rem, 2vw, 1.3rem); line-height: 1.8; max-width: 600px; font-weight: 400; }
+        .about-text-column p:first-of-type { margin-bottom: 3rem; }
+        .about-text-column p strong { display: block; margin-bottom: 1rem; font-weight: 500; color: var(--heading-color); }
+        .intro-tab { font-size: 0.8rem; margin-bottom: 2rem; text-transform: uppercase; color: var(--heading-color); }
+
+        /* --- NEW PHOTO COLLAGE --- */
+        .interactive-element-column {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+        }
+        .photo-collage-container {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            height: 350px;
+        }
+        .collage-img {
+            position: absolute;
+            border-radius: 12px;
+            border: 2px solid var(--line-color);
+            filter: grayscale(100%);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            object-fit: cover;
+        }
+        .photo-collage-container:hover .collage-img {
+             border-color: rgba(138, 176, 171, 0.5);
+        }
+        .collage-img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.08) rotate(var(--rotate-end, 0deg)) !important;
+            z-index: 10;
+            border-color: var(--accent-color);
+        }
+        .collage-img-1 {
+            width: 60%;
+            height: 70%;
+            top: 0;
+            left: 5%;
+            transform: rotate(-8deg);
+            --rotate-end: -2deg;
+        }
+        .collage-img-2 {
+            width: 50%;
+            height: 55%;
+            top: 40%;
+            left: 45%;
+            transform: rotate(10deg);
+             --rotate-end: 3deg;
+        }
+        .collage-img-3 {
+            width: 45%;
+            height: 45%;
+            top: 15%;
+            left: 35%;
+            transform: rotate(2deg);
+            --rotate-end: -1deg;
+            z-index: 2;
+        }
+
+        /* --- FADE-IN TEXT SECTION --- */
+        .fade-in-section {
+            padding: 8rem 0 4rem; 
+            text-align: center;
+        }
+        .fade-in-text {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 500;
+            color: var(--heading-color);
+            line-height: 1.3;
+        }
+
+        .cta-container { text-align: center; margin: 2rem 0 8rem 0; }
         .cta-button { display: inline-block; padding: 0.8rem 2rem; border: 1px solid var(--accent-color); border-radius: 30px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; font-weight: 500; background: transparent; color: var(--accent-color); transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); }
         .cta-button:hover { background-color: var(--accent-color); color: var(--bg-color); transform: scale(1.05); }
         .cta-button.cta-button-prominent { padding: 1rem 2.5rem; background-color: var(--dark-accent); border-color: var(--dark-accent); font-size: 0.9rem; }
-        .cta-button.cta-button-prominent:hover { background-color: var(--accent-color); }
+        .cta-button.cta-button-prominent:hover { background-color: var(--accent-color); border-color: var(--accent-color); }
 
-        /* --- SPOTIFY SECTION --- */
-        .personal-touch-wrapper {
-            background-color: var(--card-bg);
-            border: 1px solid var(--line-color);
-            border-radius: 20px;
-            padding: 4rem;
-            margin: 4rem 0;
-        }
-        .spotify-section { display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; }
+        /* --- SPOTIFY SECTION (UPDATED) --- */
+        .personal-touch-wrapper { background-color: var(--card-bg); border: 1px solid var(--line-color); border-radius: 20px; padding: 4rem; margin: 4rem 0; }
+        .spotify-section { display: flex; justify-content: space-around; align-items: center; gap: 2rem; flex-wrap: wrap; }
         .spotify-header { text-align: left; }
-        .spotify-header .intro-tab { font-size: 0.7rem; }
         .spotify-title { font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 700; color: var(--heading-color); }
-        .spotify-content { text-align: right; flex-grow: 1; }
+        .spotify-content { text-align: center; }
+        .spotify-widget-wrapper { position: relative; display: inline-block; }
+        .spotify-widget-wrapper .intro-tab { margin-bottom: 1rem; }
         .spotify-widget { display: inline-block; border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; border: 1px solid var(--line-color); }
         .spotify-widget img { width: 180px; height: 180px; display: block; }
         .spotify-widget:hover { transform: scale(1.05); box-shadow: 0 0 30px var(--dark-accent); }
@@ -106,7 +176,7 @@
         .contact-section.inverted .contact-title em { color: var(--slate-blue); }
         .footer-bottom-bar { display: flex; justify-content: space-between; align-items: center; margin-top: 10rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.1); }
         .footer-contact-links { display: flex; gap: 1.5rem; }
-        .footer-contact-links a { font-size: 0.9rem; font-weight: 500; color: var(--slate-blue); transition: color 0.3s; }
+        .footer-contact-links a { font-size: 1rem; font-weight: 500; color: var(--slate-blue); transition: color 0.3s; }
         .footer-contact-links a:hover { color: var(--inverted-text); }
         .scroll-to-top { font-size: 1.5rem; width: 50px; height: 50px; border-radius: 50%; background: transparent; border: 1px solid rgba(0,0,0,0.1); color: var(--slate-blue); cursor: pointer; display: flex; justify-content: center; align-items: center; transition: all 0.3s; opacity: 0; transform: translateY(10px); pointer-events: none; }
         .scroll-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
@@ -130,6 +200,7 @@
         /* --- KEYFRAMES --- */
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
         @keyframes growLine { to { width: 100%; } }
+        @keyframes pulse { 0%, 100% { opacity: 1; box-shadow: 0 0 0 0 var(--accent-glow); } 50% { opacity: 0.5; box-shadow: 0 0 10px 5px transparent; } }
 
         /* --- RESPONSIVE DESIGN --- */
         @media (min-width: 769px) {
@@ -141,10 +212,18 @@
             .main-nav a:hover::after { width: 100%; }
             .spotify-section { flex-wrap: nowrap; }
         }
+
+        @media (min-width: 992px) {
+            .about-content-section {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
         @media (max-width: 768px) {
             .personal-touch-wrapper { padding: 2rem; }
-            .spotify-section { justify-content: center; text-align: center; }
+            .spotify-section { justify-content: center; text-align: center; gap: 3rem;}
             .spotify-header, .spotify-content { text-align: center; flex-basis: 100%; }
+            .spotify-widget-wrapper .intro-tab { position: static; margin-bottom: 1rem; }
         }
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
@@ -158,7 +237,7 @@
         <div class="loading-content">
             <div class="name">Ruchir Kulkarni</div>
             <div class="line-container"><div class="line"></div></div>
-            <div class="designation">AI Developer & Consultant</div>
+            <div class="designation">AI Development & Storytelling</div>
         </div>
     </div>
 
@@ -199,29 +278,45 @@
                     <span><em>curiosity, code,</em> and <em>consulting</em></span>
                     <span>to craft intelligent solutions.</span>
                 </h1>
+                <div class="status animate-on-scroll">
+                    <div class="blinking-dot"></div>
+                    <span>AVAILABLE FOR NEW OPPORTUNITIES</span>
+                </div>
             </section>
 
-            <!-- About Me Section -->
-            <section class="personal-note-section">
-                 <div class="intro-tab animate-on-scroll">[BACKGROUND]</div>
-                <p class="animate-on-scroll">
-                    <strong>2k25 • Folio of Ruchir</strong>
-                    Born in India, I grew up with sports on the field, games on the screen, and movies on repeat — until hacking pulled me into the thrill of breaking and learning. That curiosity led me to pursue Computer Science, where I discovered my passion for AI and problem-solving. Now, just a year into my professional journey, I channel that same drive into building intelligent solutions that create real impact.
-                </p>
+            <!-- About Content Section -->
+            <section class="about-content-section">
+                <div class="about-text-column">
+                    <!-- About Me Section -->
+                    <div class="animate-on-scroll">
+                        <div class="intro-tab">[BACKGROUND]</div>
+                        <p>
+                            <strong>2k25 • Folio of Ruchir</strong>
+                            Born in India, I grew up with sports on the field, games on the screen, and movies on repeat — until hacking pulled me into the thrill of breaking and learning. That curiosity led me to pursue Computer Science, where I discovered my passion for AI and problem-solving. Now, just a year into my professional journey, I channel that same drive into building intelligent solutions that create real impact.
+                        </p>
+                    </div>
+                     <!-- Leadership Section -->
+                    <div class="animate-on-scroll" style="transition-delay: 0.1s;">
+                        <div class="intro-tab">[LEADERSHIP & COMMUNITY]</div>
+                        <p>
+                            I believe in sharing knowledge and fostering growth. I've had the privilege of delivering seminars on AI ethics at my college and am currently mentoring three talented interns at Calfus Inc., guiding them through their first steps in the world of AI development.
+                        </p>
+                    </div>
+                </div>
+                <div class="interactive-element-column animate-on-scroll" style="transition-delay: 0.2s;">
+                    <!-- UPDATED: Photo Collage -->
+                    <div class="photo-collage-container">
+                        <img src="https://placehold.co/400x500/202423/8ab0ab?text=Ruchir+1" alt="A photo from a collage" class="collage-img collage-img-1">
+                        <img src="https://placehold.co/400x400/202423/8ab0ab?text=Ruchir+2" alt="A photo from a collage" class="collage-img collage-img-2">
+                        <img src="https://placehold.co/300x300/202423/8ab0ab?text=Ruchir+3" alt="A photo from a collage" class="collage-img collage-img-3">
+                    </div>
+                </div>
             </section>
             
-            <!-- Leadership Section -->
-            <section class="leadership-section">
-                <div class="intro-tab animate-on-scroll">[LEADERSHIP & COMMUNITY]</div>
-                <p class="animate-on-scroll">
-                    I believe in sharing knowledge and fostering growth. I've had the privilege of delivering seminars on AI ethics at my college and am currently mentoring three talented interns at Calfus Inc., guiding them through their first steps in the world of AI development.
-                </p>
-            </section>
-
-            <!-- Animated Text Section -->
-            <section class="animated-text-section">
-                <h2 class="staggered-fade-in animate-on-scroll">
-                    <span>INTELLIGENT</span> <span>SOLUTIONS,</span> <span>UNIQUELY</span> <span>CRAFTED.</span>
+            <!-- Animated Text Section - UPDATED -->
+            <section class="fade-in-section">
+                <h2 class="fade-in-text animate-on-scroll">
+                    INTELLIGENT SOLUTIONS, UNIQUELY CRAFTED THROUGH <em>DATA,</em> <em>RESEARCH</em> & <em>INNOVATION.</em>
                 </h2>
             </section>
 
@@ -233,13 +328,15 @@
             <div class="personal-touch-wrapper animate-on-scroll">
                 <section class="spotify-section">
                     <div class="spotify-header">
-                        <div class="intro-tab">[SNEAK PEAK]</div>
                         <h2 class="spotify-title">Currently On <em>repeat</em></h2>
                     </div>
                     <div class="spotify-content">
-                        <a href="https://open.spotify.com/track/1YYhDizHr3HPvoRwq1PenQ" target="_blank" class="spotify-widget" aria-label="Listen to my current favorite song on Spotify">
-                            <img src="images/john-denver-album.jpg" alt="Album art" onerror="this.onerror=null; this.src='https://placehold.co/400x400/1a1d1a/8ab0ab?text=Album+Art';">
-                        </a>
+                        <div class="spotify-widget-wrapper">
+                             <div class="intro-tab">[ GIVE IT A LISTEN ]</div>
+                            <a href="https://open.spotify.com/track/1YYhDizHr3HPvoRwq1PenQ" target="_blank" class="spotify-widget" aria-label="Listen to my current favorite song on Spotify">
+                                <img src="https://placehold.co/400x400/1a1d1a/8ab0ab?text=Album+Art" alt="Album art for Poems, Prayers & Promises by John Denver" onerror="this.onerror=null;this.src='https://placehold.co/400x400/1a1d1a/8ab0ab?text=Album+Art';">
+                            </a>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -301,6 +398,7 @@
         }
         
         // --- GENERAL SCROLL-TRIGGERED ANIMATIONS ---
+        // The existing observer handles the fade-in effect for the text now.
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -310,24 +408,6 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
         
-        // --- STAGGERED FADE-IN ANIMATION ---
-        const staggeredContainer = document.querySelector('.staggered-fade-in');
-        if (staggeredContainer) {
-            const staggeredObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.parentElement.classList.add('is-visible'); 
-                        const spans = entry.target.querySelectorAll('span');
-                        spans.forEach((span, index) => {
-                            span.style.transitionDelay = `${index * 0.08}s`;
-                        });
-                        staggeredObserver.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.5 });
-            staggeredObserver.observe(staggeredContainer);
-        }
-
         // --- MOBILE MENU ---
         const menuButton = document.querySelector('.floating-menu-button');
         const menuOverlay = document.querySelector('.menu-overlay');

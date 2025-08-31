@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <style>
-        /* --- PROFESSIONAL REDESIGN V5 (Shared Styles) --- */
+        /* --- PROFESSIONAL REDESIGN V6 (Shared Styles) --- */
         :root {
             --bg-color: #1a1d1a;
             --primary-text: #8ab0ab;
@@ -66,7 +66,32 @@
         /* --- HERO & BLOG SECTION --- */
         .hero-section { min-height: 60vh; display: flex; flex-direction: column; justify-content: center; }
         .hero-text { font-size: clamp(3rem, 8vw, 6rem); line-height: 1.2; font-weight: 500; color: var(--heading-color); }
+
+        /* --- NEW BLOG STATUS --- */
+        .blog-status {
+            display: flex;
+            align-items: center;
+            margin-top: 2.5rem;
+            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+        .blinking-dot {
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            margin-right: 15px;
+            animation: pulse 2s infinite;
+        }
+
         .blog-section { padding: 4rem 0 8rem; }
+        .section-header {
+            margin-bottom: 4rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: var(--heading-color);
+        }
         .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
         .blog-card {
             background-color: var(--card-bg);
@@ -74,6 +99,8 @@
             border-radius: 12px;
             display: flex;
             flex-direction: column;
+            overflow: hidden;
+            position: relative;
             transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s;
         }
         .blog-card:hover {
@@ -81,14 +108,24 @@
             border-color: var(--accent-color);
             box-shadow: 0 20px 40px rgba(0,0,0,0.2), 0 0 20px var(--accent-glow);
         }
+        .blog-card-image-wrapper {
+            width: 100%;
+            padding-top: 56.25%;
+            position: relative;
+            background-color: #2a2e2d;
+        }
+        .blog-card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
         .blog-card-content { padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; }
         .blog-meta { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; color: var(--primary-text); }
-        .blog-card-content h3 { font-size: 1.6rem; color: var(--heading-color); margin-bottom: 1rem; font-weight: 500; line-height: 1.4; }
-        .blog-card-content p { line-height: 1.7; margin-bottom: 1.5rem; }
-        .blog-card-footer { margin-top: auto; }
-        .read-more-link { font-weight: 500; color: var(--accent-color); display: inline-flex; align-items: center; gap: 0.5rem; }
-        .read-more-link .arrow { transition: transform 0.3s; }
-        .blog-card:hover .read-more-link .arrow { transform: translateX(5px); }
+        .blog-card-content h3 { font-size: 1.6rem; color: var(--heading-color); margin-bottom: 1rem; font-weight: 500; line-height: 1.4; flex-grow: 1; }
+        
         .tags {
             margin-top: 1.5rem;
             display: flex;
@@ -102,6 +139,27 @@
             border-radius: 15px;
             font-size: 0.75rem;
         }
+        .card-link-arrow {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--line-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .blog-card:hover .card-link-arrow {
+            opacity: 1;
+            transform: scale(1);
+        }
 
         /* --- CONTACT / FOOTER SECTION --- */
         .contact-section.inverted { background-color: var(--inverted-bg); color: var(--inverted-text); text-align: center; padding: 10rem 5vw 4rem; margin: 0 -5vw; border-radius: 20px 20px 0 0; position: relative; }
@@ -109,7 +167,7 @@
         .contact-section.inverted .contact-title em { color: var(--slate-blue); }
         .footer-bottom-bar { display: flex; justify-content: space-between; align-items: center; margin-top: 10rem; padding-top: 2rem; border-top: 1px solid rgba(0,0,0,0.1); }
         .footer-contact-links { display: flex; gap: 1.5rem; }
-        .footer-contact-links a { font-size: 0.9rem; font-weight: 500; color: var(--slate-blue); transition: color 0.3s; }
+        .footer-contact-links a { font-size: 1rem; font-weight: 500; color: var(--slate-blue); transition: color 0.3s; }
         .footer-contact-links a:hover { color: var(--inverted-text); }
         .scroll-to-top { font-size: 1.5rem; width: 50px; height: 50px; border-radius: 50%; background: transparent; border: 1px solid rgba(0,0,0,0.1); color: var(--slate-blue); cursor: pointer; display: flex; justify-content: center; align-items: center; transition: all 0.3s; opacity: 0; transform: translateY(10px); pointer-events: none; }
         .scroll-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
@@ -133,6 +191,7 @@
         /* --- KEYFRAMES --- */
         @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
         @keyframes growLine { to { width: 100%; } }
+        @keyframes pulse { 0%, 100% { opacity: 1; box-shadow: 0 0 0 0 var(--accent-glow); } 50% { opacity: 0.5; box-shadow: 0 0 10px 5px transparent; } }
 
         /* --- RESPONSIVE DESIGN --- */
         @media (min-width: 769px) {
@@ -155,7 +214,7 @@
         <div class="loading-content">
             <div class="name">Ruchir Kulkarni</div>
             <div class="line-container"><div class="line"></div></div>
-            <div class="designation">AI Developer & Consultant</div>
+            <div class="designation">AI Development & Storytelling</div>
         </div>
     </div>
 
@@ -194,52 +253,58 @@
                 <h1 class="hero-text animate-on-scroll">
                     Thoughts on AI, <em>code,</em> and creative problem-solving.
                 </h1>
+                <!-- ADDED: Blog Status -->
+                <div class="blog-status animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="blinking-dot"></div>
+                    <span>Scratching my head over the next blog. Stay tuned.</span>
+                </div>
             </section>
             
             <!-- Blog Grid Section -->
             <section class="blog-section">
+                <div class="section-header animate-on-scroll">[ RECENT RELEASES ]</div>
                 <div class="blog-grid">
                     <!-- Blog Post 1 -->
                     <a href="#" class="blog-card animate-on-scroll" aria-label="Read more about The Ethics of AI">
+                        <div class="blog-card-image-wrapper">
+                            <img src="https://placehold.co/600x400/202423/8ab0ab?text=Ethics+of+AI" alt="Blog post placeholder image" class="blog-card-image">
+                        </div>
                         <div class="blog-card-content">
                             <div class="blog-meta">AUG 28, 2025 • 5 MIN READ</div>
                             <h3>The Ethics of AI: Navigating the Moral Maze</h3>
-                            <p>Exploring the complex ethical questions developers face as we build more intelligent systems, from bias in algorithms to the future of work.</p>
                             <div class="tags">
                                 <span>AI Ethics</span><span>Technology</span><span>Future</span>
                             </div>
                         </div>
-                        <div class="blog-card-footer">
-                             <div class="read-more-link">Read More <span class="arrow">&rarr;</span></div>
-                        </div>
+                        <div class="card-link-arrow">&#8599;</div>
                     </a>
                     <!-- Blog Post 2 -->
                     <a href="#" class="blog-card animate-on-scroll" style="transition-delay: 0.1s;" aria-label="Read more about From Python to Production">
+                         <div class="blog-card-image-wrapper">
+                            <img src="https://placehold.co/600x400/202423/8ab0ab?text=ML+Deployment" alt="Blog post placeholder image" class="blog-card-image">
+                        </div>
                          <div class="blog-card-content">
                             <div class="blog-meta">JUL 15, 2025 • 8 MIN READ</div>
                             <h3>From Python to Production: A Guide to Deploying ML Models</h3>
-                            <p>A practical walkthrough of taking a machine learning model from a Jupyter Notebook to a scalable, production-ready API using Flask and Docker.</p>
                              <div class="tags">
                                 <span>Python</span><span>Deployment</span><span>DevOps</span>
                             </div>
                         </div>
-                         <div class="blog-card-footer">
-                             <div class="read-more-link">Read More <span class="arrow">&rarr;</span></div>
-                        </div>
+                        <div class="card-link-arrow">&#8599;</div>
                     </a>
                     <!-- Blog Post 3 -->
                     <a href="#" class="blog-card animate-on-scroll" style="transition-delay: 0.2s;" aria-label="Read more about The Art of the Side Project">
+                        <div class="blog-card-image-wrapper">
+                            <img src="https://placehold.co/600x400/202423/8ab0ab?text=Side+Projects" alt="Blog post placeholder image" class="blog-card-image">
+                        </div>
                          <div class="blog-card-content">
                             <div class="blog-meta">JUN 02, 2025 • 4 MIN READ</div>
                             <h3>The Art of the Side Project: Why Every Developer Needs One</h3>
-                            <p>How personal projects can accelerate your learning, expand your skillset, and even lead to unexpected career opportunities.</p>
                             <div class="tags">
                                 <span>Career</span><span>Development</span><span>Creativity</span>
                             </div>
                         </div>
-                         <div class="blog-card-footer">
-                             <div class="read-more-link">Read More <span class="arrow">&rarr;</span></div>
-                        </div>
+                        <div class="card-link-arrow">&#8599;</div>
                     </a>
                 </div>
             </section>

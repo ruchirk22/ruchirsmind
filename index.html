@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
     <style>
-        /* --- PROFESSIONAL REDESIGN V5 --- */
+        /* --- PROFESSIONAL REDESIGN V7 --- */
         :root {
             --bg-color: #1a1d1a;
             --primary-text: #8ab0ab;
@@ -231,14 +231,14 @@
             display: flex;
             align-items: center;
             margin-top: 2.5rem;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
         }
 
         .blinking-dot {
-            width: 8px;
-            height: 8px;
+            width: 10px;
+            height: 10px;
             background-color: var(--accent-color);
             border-radius: 50%;
             margin-right: 15px;
@@ -263,13 +263,7 @@
             transition: color 0.3s ease-out;
         }
         .word-reveal-text span.highlighted { color: var(--heading-color); }
-        .personal-note-section { padding: 4rem 0 8rem 0; }
-        .personal-note-section p {
-            font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-            line-height: 1.8;
-            max-width: 800px;
-            font-weight: 400;
-        }
+        
         .cta-container {
             text-align: left;
             margin-top: 2.5rem;
@@ -300,13 +294,31 @@
             border-color: var(--dark-accent);
         }
 
-        /* --- TECH STACK --- */
+        .cta-button.cta-button-prominent:hover {
+             background-color: var(--accent-color);
+             border-color: var(--accent-color);
+        }
+
+        /* --- UPDATED TECH STACK --- */
         .tech-stack-section {
-            padding: 4rem 0;
+            padding: 4rem 0 6rem; /* Added bottom padding */
+            text-align: center; /* Center align the title */
+        }
+        .tech-stack-title {
+            font-size: 1.5rem; /* Larger font size */
+            font-weight: 500;
+            color: var(--heading-color);
+            margin-bottom: 3rem; /* Space below title */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .tech-stack-section .tech-marquee {
+            width: 100%;
+            overflow: hidden;
             position: relative;
         }
-        .tech-stack-section::before,
-        .tech-stack-section::after {
+        .tech-stack-section .tech-marquee::before,
+        .tech-stack-section .tech-marquee::after {
             content: '';
             position: absolute;
             top: 0;
@@ -314,22 +326,21 @@
             height: 100%;
             z-index: 2;
         }
-        .tech-stack-section::before {
+        .tech-stack-section .tech-marquee::before {
             left: 0;
             background: linear-gradient(to right, var(--bg-color), transparent);
         }
-        .tech-stack-section::after {
+        .tech-stack-section .tech-marquee::after {
             right: 0;
             background: linear-gradient(to left, var(--bg-color), transparent);
-        }
-        .tech-marquee {
-            width: 100%;
-            overflow: hidden;
         }
         .tech-marquee-content {
             display: flex;
             width: fit-content;
             animation: marquee 30s linear infinite;
+        }
+        .tech-marquee:hover .tech-marquee-content {
+            animation-play-state: paused;
         }
         .tech-item {
             padding: 0.8rem 1.8rem;
@@ -340,12 +351,37 @@
             border: 1px solid var(--line-color);
             border-radius: 20px;
             white-space: nowrap;
+            position: relative;
+            overflow: hidden;
+            cursor: default;
+            z-index: 1;
+        }
+        .tech-item .proficiency-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            background-color: var(--dark-accent);
+            width: 0;
+            transition: width 0.4s ease;
+            z-index: -1;
+        }
+        .tech-item:hover .proficiency-bar {
+            width: var(--p, 0%);
+        }
+        
+        /* --- UPDATED FEATURED WORK --- */
+        .featured-work-section {
+            padding: 6rem 0 8rem; /* Adjusted top padding */
+        }
+        .featured-work-title {
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 500;
+            color: var(--heading-color);
+            margin-bottom: 4rem;
+            text-align: center; /* Centered the title */
         }
 
-        /* --- FEATURED WORK --- */
-        .featured-work-section {
-            padding: 8rem 0;
-        }
         .divider {
             display: flex;
             align-items: center;
@@ -362,21 +398,36 @@
         }
         .project-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
             margin-top: 4rem;
         }
-        .card {
+        .project-card {
             background: var(--card-bg);
             border: 1px solid var(--line-color);
             border-radius: 12px;
             overflow: hidden;
             transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s;
         }
-        .card:hover {
+        .project-card:hover {
             transform: translateY(-10px);
             border-color: var(--accent-color);
             box-shadow: 0 20px 40px rgba(0,0,0,0.2), 0 0 20px var(--accent-glow);
+        }
+        .project-card-image-wrapper {
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            position: relative;
+            overflow: hidden;
+            background-color: #2a2e2d;
+        }
+        .project-card-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .card-content { padding: 2rem; }
         .card-content h3 {
@@ -423,7 +474,7 @@
         }
         .footer-contact-links { display: flex; gap: 1.5rem; }
         .footer-contact-links a {
-            font-size: 0.9rem;
+            font-size: 1rem;
             font-weight: 500;
             color: var(--slate-blue);
             transition: color 0.3s;
@@ -565,10 +616,10 @@
             .main-nav a:hover { color: var(--heading-color); }
             .main-nav a:hover::after { width: 100%; }
         }
-
-        @media (max-width: 480px) {
+        
+        @media (min-width: 992px) {
             .project-cards {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
             }
         }
         
@@ -588,7 +639,7 @@
         <div class="loading-content">
             <div class="name">Ruchir Kulkarni</div>
             <div class="line-container"><div class="line"></div></div>
-            <div class="designation">AI Developer & Consultant</div>
+            <div class="designation">AI Development & Storytelling</div>
         </div>
     </div>
     
@@ -643,35 +694,35 @@
                 <p class="word-reveal-text">I help brands and businesses navigate the AI era by translating ideas into intelligent, future-ready systems.</p>
             </section>
 
-            <!-- Tech Stack Section -->
+            <!-- Tech Stack Section - UPDATED -->
             <section class="tech-stack-section animate-on-scroll">
+                <h2 class="tech-stack-title">My Tech Stack</h2>
                 <div class="tech-marquee">
                     <div class="tech-marquee-content">
-                        <div class="tech-item">Python</div>
-                        <div class="tech-item">PyTorch</div>
-                        <div class="tech-item">TensorFlow</div>
-                        <div class="tech-item">JavaScript</div>
-                        <div class="tech-item">React</div>
-                        <div class="tech-item">Node.js</div>
-                        <div class="tech-item">Cybersecurity</div>
-                        <div class="tech-item">Flask</div>
-                        <div class="tech-item">SQL</div>
-                        <div class="tech-item">AWS</div>
+                        <div class="tech-item" style="--p: 95%;">Python <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 90%;">PyTorch <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 85%;">TensorFlow <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 80%;">JavaScript <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 75%;">React <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 70%;">Node.js <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 90%;">Cybersecurity <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 85%;">Flask <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 80%;">SQL <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 70%;">AWS <span class="proficiency-bar"></span></div>
                         <!-- Duplicate for seamless loop -->
-                        <div class="tech-item">Python</div>
-                        <div class="tech-item">PyTorch</div>
-                        <div class="tech-item">TensorFlow</div>
-                        <div class="tech-item">JavaScript</div>
-                        <div class="tech-item">React</div>
-                        <div class="tech-item">Node.js</div>
-                        <div class="tech-item">Cybersecurity</div>
-                        <div class="tech-item">Flask</div>
-                        <div class="tech-item">SQL</div>
-                        <div class="tech-item">AWS</div>
+                        <div class="tech-item" style="--p: 95%;">Python <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 90%;">PyTorch <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 85%;">TensorFlow <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 80%;">JavaScript <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 75%;">React <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 70%;">Node.js <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 90%;">Cybersecurity <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 85%;">Flask <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 80%;">SQL <span class="proficiency-bar"></span></div>
+                        <div class="tech-item" style="--p: 70%;">AWS <span class="proficiency-bar"></span></div>
                     </div>
                 </div>
             </section>
-
 
             <!-- Featured Projects Divider -->
             <div class="divider animate-on-scroll">
@@ -682,55 +733,60 @@
 
             <!-- Featured Work Section -->
             <section class="featured-work-section" id="projects">
+                <h2 class="featured-work-title animate-on-scroll">Featured Work</h2>
                 <div class="project-cards">
                     <!-- Project 1 -->
-                    <div class="card animate-on-scroll">
-                        <a href="https://github.com" target="_blank" aria-label="View AuthGuardian project">
-                            <div class="card-content">
-                                <h3>AuthGuardian - Secure Login</h3>
-                                <p>Developed a multi-factor authentication system using Python and JWT, reducing unauthorized access attempts by 98%.</p>
-                                <div class="tags">
-                                    <span>Python</span><span>Cybersecurity</span><span>Flask</span>
-                                </div>
+                    <a href="https://github.com" target="_blank" class="project-card animate-on-scroll" aria-label="View AuthGuardian project">
+                        <div class="project-card-image-wrapper">
+                            <img src="https://placehold.co/600x400/202423/8ab0ab?text=AuthGuardian" alt="AuthGuardian project placeholder image" class="project-card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>AuthGuardian - Secure Login</h3>
+                            <p>Developed a multi-factor authentication system using Python and JWT, reducing unauthorized access attempts by 98%.</p>
+                            <div class="tags">
+                                <span>Python</span><span>Cybersecurity</span><span>Flask</span>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                     <!-- Project 2 -->
-                    <div class="card animate-on-scroll" style="transition-delay: 0.1s;">
-                        <a href="https://github.com" target="_blank" aria-label="View Sentiment Analysis AI project">
-                            <div class="card-content">
-                                <h3>Sentiment Analysis AI</h3>
-                                <p>Built and trained a sentiment analysis model with PyTorch that improved customer support ticket classification by over 40%.</p>
-                                <div class="tags">
-                                    <span>PyTorch</span><span>NLP</span><span>Pandas</span>
-                                </div>
+                    <a href="https://github.com" target="_blank" class="project-card animate-on-scroll" style="transition-delay: 0.1s;" aria-label="View Sentiment Analysis AI project">
+                         <div class="project-card-image-wrapper">
+                            <img src="https://placehold.co/600x400/202423/8ab0ab?text=Sentiment+AI" alt="Sentiment Analysis AI project placeholder image" class="project-card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>Sentiment Analysis AI</h3>
+                            <p>Built and trained a sentiment analysis model with PyTorch that improved customer support ticket classification by over 40%.</p>
+                            <div class="tags">
+                                <span>PyTorch</span><span>NLP</span><span>Pandas</span>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                     <!-- Project 3 -->
-                   <div class="card animate-on-scroll" style="transition-delay: 0.2s;">
-                        <a href="https://github.com" target="_blank" aria-label="View ThreatNet Intrusion Detection project">
-                            <div class="card-content">
-                                <h3>ThreatNet Intrusion Detection</h3>
-                                <p>Designed a real-time network intrusion detection system using machine learning to identify and flag anomalous network behavior.</p>
-                               <div class="tags">
-                                    <span>Scikit-learn</span><span>AI Security</span><span>TensorFlow</span>
-                                </div>
+                   <a href="https://github.com" target="_blank" class="project-card animate-on-scroll" style="transition-delay: 0.2s;" aria-label="View ThreatNet Intrusion Detection project">
+                         <div class="project-card-image-wrapper">
+                            <img src="https://placehold.co/600x400/202423/8ab0ab?text=ThreatNet" alt="ThreatNet project placeholder image" class="project-card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>ThreatNet Intrusion Detection</h3>
+                            <p>Designed a real-time network intrusion detection system using machine learning to identify and flag anomalous network behavior.</p>
+                           <div class="tags">
+                                <span>Scikit-learn</span><span>AI Security</span><span>TensorFlow</span>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                      <!-- Project 4 -->
-                   <div class="card animate-on-scroll" style="transition-delay: 0.3s;">
-                        <a href="https://github.com" target="_blank" aria-label="View a placeholder project">
-                            <div class="card-content">
-                                <h3>AI-Powered Recommendation Engine</h3>
-                                <p>Engineered a collaborative filtering model to provide personalized content recommendations, boosting user engagement by 25%.</p>
-                               <div class="tags">
-                                    <span>Recommendation Systems</span><span>Python</span><span>AI</span>
-                                </div>
+                   <a href="https://github.com" target="_blank" class="project-card animate-on-scroll" style="transition-delay: 0.3s;" aria-label="View a placeholder project">
+                         <div class="project-card-image-wrapper">
+                            <img src="https://placehold.co/600x400/202423/8ab0ab?text=RecEngine" alt="Recommendation Engine project placeholder image" class="project-card-image">
+                        </div>
+                        <div class="card-content">
+                            <h3>AI-Powered Recommendation Engine</h3>
+                            <p>Engineered a collaborative filtering model to provide personalized content recommendations, boosting user engagement by 25%.</p>
+                           <div class="tags">
+                                <span>Recommendation Systems</span><span>Python</span><span>AI</span>
                             </div>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                 </div>
                 <div class="cta-container animate-on-scroll">
                     <a href="https://github.com" target="_blank" class="cta-button cta-button-prominent">VIEW ALL MY WORK</a>
@@ -928,3 +984,4 @@
     </script>
 </body>
 </html>
+
